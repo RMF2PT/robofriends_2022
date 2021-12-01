@@ -3,7 +3,7 @@ import Card from './Card'
 
 const CardList = ({ robots }) => {
   return (
-    <>
+    <div className='flex flex-wrap place-content-center'>
       {robots.map(user => {
         return (
           <Card 
@@ -14,7 +14,7 @@ const CardList = ({ robots }) => {
           />
         );
       })}
-    </>
+    </div>
   );
 }
 
