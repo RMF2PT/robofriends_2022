@@ -21,9 +21,9 @@ class App extends Component {
       return robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase())
     });
     return (
-      <div className='bg-gray-100 w-full h-screen'>
+      <div className='bg-gradient-to-r from-indigo-400 to-green-800 w-full h-screen'>
         <div className='flex flex-col items-center'>
-          <h1>Robofriends</h1>
+          <h1 className='uppercase text-4xl p-2 text-green-400'>Robofriends</h1>
           <SearchBox searchChange={this.onSearchChange}/>
         </div>
         <CardList robots={filteredRobots} />
