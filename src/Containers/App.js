@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import CardList from './CardList'
-import SearchBox from './SearchBox'
-// import { robots } from './robots'
+import CardList from '../Components/CardList'
+import SearchBox from '../SearchBox'
+import Scroll from '../Components/Scroll'
 
 class App extends Component {
   constructor() {
@@ -30,13 +30,13 @@ class App extends Component {
       return <h1>Loading</h1>
     } else {
       return (
-        <div className='bg-gradient-to-r from-indigo-400 to-green-800 w-full h-screen'>
-        <div className='flex flex-col items-center'>
+        <div className='bg-gradient-to-r from-indigo-400 to-green-800 w-full h-screen flex flex-col items-center'>
           <h1 className='uppercase text-4xl p-2 text-green-400 mt-4'>Robofriends</h1>
           <SearchBox searchChange={this.onSearchChange}/>
+          <Scroll>
+            <CardList robots={filteredRobots} />
+          </Scroll>
         </div>
-        <CardList robots={filteredRobots} />
-      </div>
       );
     }
   }
